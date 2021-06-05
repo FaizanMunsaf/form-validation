@@ -1,0 +1,79 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form name="frmadd", id="frmadd" action="saboorlone92@gmail.com" method="post" enctype="multipart/form-data">
+
+<table width="85%" height="133" border="1">
+  <tr>
+    <th colspan="2" align="center" scope="col"><p>Add Student</p></th>
+  </tr>
+  <tr>
+    <td width="43%">Name </td>
+    <td width="57%"><input type="text" name="txtname" id="txtname" /></td> 
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><input type="text" name="txtemail" id="txtemail" /></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" name="txtpassword" id="txtpassword" /></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td>Male 
+    <input type="radio" name="rdgender" id="radio" value="Male" />
+    Female 
+    <input type="radio" name="rdgender" id="radio2" value="Female" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="submit" name="btnadd" id="btnadd" value="Add Now" onclick="return validateme();" /></td>
+
+  </tr>
+</table>
+</form>
+
+
+</body>
+</html>
+<script language="javascript">
+		function validateme()
+		
+		{
+			if(document.frmadd.txtname.value == "")
+			{
+					alert("Please Provide Name");
+					document.frmadd.txtname.focus();
+					return false;	
+			}
+			
+			if(document.frmadd.txtemail.value	==	"")
+			{
+				alert("Please provide Email");
+				document.frmadd.txtemail.focus();
+				return false;
+			}
+			
+			if(document.frmadd.txtpassword.value	==	"")
+			{
+				alert("Please provide Password");
+				document.frmadd.txtpassword.focus();
+				return false;
+			}
+			
+			if((document.frmadd.rdgender[0].checked  == false) && (document.frmadd.rdgender[1].checked  == false))
+			{
+				
+			alert("Please Select Gender");
+			return false;	
+			}
+			
+			return true;
+		}
+</script>
